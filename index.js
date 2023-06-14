@@ -52,11 +52,11 @@ const __dirname= path.dirname(__filename)
 //middleware
 app.use(morgan("dev"))
 app.use(express.json());
-app.use(express.static(path.join(__dirname,'../abcl-client/build')))
+app.use(express.static(path.join(__dirname,'./abcl-client/build)))
 
 
 app.use("*", function (req, res) {
-  res.sendFile(path.join(__dirname,'../abcl-client/build/index.html'))
+  res.sendFile(path.join(__dirname,'./abcl-client/build'))
 })
 
 
